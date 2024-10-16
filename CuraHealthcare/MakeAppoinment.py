@@ -7,17 +7,17 @@ from selenium.webdriver.support.select import Select
 
 def chrome_setup():
     from selenium.webdriver.chrome.service import Service
-    ser_obj=Service("C:\Program Files\Drivers\chromedriver-win64 (1)\chromedriver-win64\chromedriver.exe")
+    ser_obj=Service("C:\Windows\chromedriver.exe")
     driver=webdriver.Chrome(service=ser_obj)
     return driver
 def edge_setup():
     from selenium.webdriver.edge.service import Service
-    ser_obj=Service("C:\Program Files\Drivers\edgedriver_win64 (1)\msedgedriver.exe")
+    ser_obj=Service("C:\Windows\msedgedriver.exe")
     driver=webdriver.Edge(service=ser_obj)
     return driver
 def firefox_setup():
     from selenium.webdriver.firefox.service import Service
-    ser_obj=Service("C:\Program Files\Drivers\geckodriver-v0.35.0-win64\geckodriver.exe")
+    ser_obj=Service("C:\Windows\geckodriver.exe")
     driver=webdriver.Firefox(service=ser_obj)
     return driver
 
@@ -56,5 +56,5 @@ driver.find_element(By.XPATH,"//button[@id='btn-book-appointment']").click()
 time.sleep(2)
 
 # Take screenshot of Appointment confirmation page
-driver.save_screenshot(os.getcwd()+'\\confirmationpage.jpg')
+driver.save_screenshot(os.getcwd()+'\\confirmationpage1.jpg')
 driver.close()
